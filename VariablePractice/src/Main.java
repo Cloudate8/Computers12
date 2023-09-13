@@ -42,28 +42,25 @@ public class Main {
         double priceDrink = 2.0;
         double taxMultiplier = 1.12;
         Scanner scanner = new Scanner(System.in);
-        String orderPrompt = """
-                Enter what you want to order:
-                1. Hot Dog
-                2. Drink
-                """;
-        String orderQuantityPrompt = "Enter the quantity: ";
-        String orderTotalPrompt = "Your total is: $%.2f";
-        String invalidChoiceMessage = "Invalid choice";
+        String hotDogQuantityPrompt = "Enter the quantity of hot dogs wanted: ";
+        String drinksQuantityPrompt = "Enter the quantity of drinks wanted: ";
+        String orderTotalTemplate = "Your total is: $%.2f";
         String invalidQuantityMessage = "Invalid quantity";
-        System.out.println(orderPrompt);
-        int choice = scanner.nextInt();
-        if (choice != 1 && choice != 2) {
-            System.out.println(invalidChoiceMessage);
-            return;
-        }
-        System.out.println(orderQuantityPrompt);
-        int quantity = scanner.nextInt();
-        if (quantity <= 0) {
+
+        System.out.println(hotDogQuantityPrompt);
+        int hotDogQuantity = scanner.nextInt();
+        if (hotDogQuantity < 0) {
             System.out.println(invalidQuantityMessage);
             return;
         }
-        double total = (choice == 1 ? priceHotDog : priceDrink) * quantity * taxMultiplier;
-        System.out.printf(orderTotalPrompt, total);
+        System.out.println(drinksQuantityPrompt);
+        int drinksQuantity = scanner.nextInt();
+        if (drinksQuantity < 0) {
+            System.out.println(invalidQuantityMessage);
+            return;
+        }
+
+        double total = (priceHotDog * hotDogQuantity + priceDrink * drinksQuantity) * taxMultiplier;
+        System.out.printf(orderTotalTemplate, total);
     }
 }
