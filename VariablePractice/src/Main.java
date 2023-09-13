@@ -49,16 +49,18 @@ public class Main {
                 """;
         String orderQuantityPrompt = "Enter the quantity: ";
         String orderTotalPrompt = "Your total is: $%.2f";
+        String invalidChoiceMessage = "Invalid choice";
+        String invalidQuantityMessage = "Invalid quantity";
         System.out.println(orderPrompt);
         int choice = scanner.nextInt();
         if (choice != 1 && choice != 2) {
-            System.out.println("Invalid choice");
+            System.out.println(invalidChoiceMessage);
             return;
         }
         System.out.println(orderQuantityPrompt);
         int quantity = scanner.nextInt();
         if (quantity <= 0) {
-            System.out.println("Invalid quantity");
+            System.out.println(invalidQuantityMessage);
             return;
         }
         double total = (choice == 1 ? priceHotDog : priceDrink) * quantity * taxMultiplier;
