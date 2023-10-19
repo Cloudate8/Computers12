@@ -1,4 +1,4 @@
-package com.cloudate9.module2;
+package com.cloudate9.module1.part2;
 
 public class Circle extends TwoDShape {
 

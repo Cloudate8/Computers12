@@ -1,18 +1,19 @@
-package com.cloudate9.module4;
+package com.cloudate9.module1.part2;
 
-public class Triangle extends TwoDShape implements Rotate {
+public class Triangle extends TwoDShape {
+
+    // These are not initialized if the constructor Triangle(double width, double height) is called
     double side1;
     double side2;
     double side3;
-    private double angle = 0;
 
-    public Triangle(double width, double height, Colour colour) {
-        super(width, height, colour);
+    public Triangle(double width, double height) {
+        super(width, height);
     }
 
-    public Triangle(double side1, double side2, double side3, Colour colour) {
+    public Triangle(double side1, double side2, double side3) {
         // Let this.side1 be the width of the triangle and heronsHeight to be its height
-        super(colour);
+        super();
 
         // These need to come before heronsHeight is called because it uses them
         this.side1 = side1;
@@ -41,30 +42,10 @@ public class Triangle extends TwoDShape implements Rotate {
         return "Triangle{" +
                 "width=" + super.width +
                 ", height=" + super.height +
-                ", colour=" + super.colour +
                 ", side1=" + side1 +
                 ", side2=" + side2 +
                 ", side3=" + side3 +
-                ", height=" + heronsHeight() +
                 ", area=" + getArea() +
-                ", angle=" + angle +
                 '}';
-    }
-
-    @Override
-    public void rotate90() {
-        rotate(90);
-    }
-
-    @Override
-    public void rotate180() {
-        rotate(180);
-    }
-
-    @Override
-    public void rotate(double degree) {
-        angle += degree;
-        // Ensure that angle is 0 <= angle < 360
-        angle %= 360;
     }
 }

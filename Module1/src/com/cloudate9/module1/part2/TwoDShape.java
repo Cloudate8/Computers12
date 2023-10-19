@@ -1,19 +1,15 @@
-package com.cloudate9.module4;
+package com.cloudate9.module1.part2;
 
 public abstract class TwoDShape {
     double width;
     double height;
 
-    Colour colour;
-
-    public TwoDShape(double width, double height, Colour colour) {
+    public TwoDShape(double width, double height) {
         this.width = width;
         this.height = height;
-        this.colour = colour;
     }
 
-    public TwoDShape(Colour colour) {
-        this.colour = colour;
+    public TwoDShape() {
     }
 
     public double getWidth() {
@@ -30,14 +26,6 @@ public abstract class TwoDShape {
 
     public void setHeight(double height) {
         this.height = height;
-    }
-
-    public Colour getColour() {
-        return colour;
-    }
-
-    public void setColour(Colour colour) {
-        this.colour = colour;
     }
 
     public abstract double getArea();

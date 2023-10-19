@@ -1,4 +1,4 @@
-package com.cloudate9.module1;
+package com.cloudate9.module1.part1;
 
 public class TwoDShape {
     double width;

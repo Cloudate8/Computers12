@@ -1,6 +1,8 @@
-package com.cloudate9.module3;
+package com.cloudate9.module1.part3;
 
 public class Triangle extends TwoDShape implements Rotate {
+
+    // These are not initialized if the constructor Triangle(double width, double height) is called
     double side1;
     double side2;
     double side3;
@@ -44,7 +46,6 @@ public class Triangle extends TwoDShape implements Rotate {
                 ", side1=" + side1 +
                 ", side2=" + side2 +
                 ", side3=" + side3 +
-                ", height=" + heronsHeight() +
                 ", area=" + getArea() +
                 ", angle=" + angle +
                 '}';

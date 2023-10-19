@@ -1,6 +1,8 @@
-package com.cloudate9.module1;
+package com.cloudate9.module1.part1;
 
 public class Triangle extends TwoDShape {
+
+    // These are not initialized if the constructor Triangle(double width, double height) is called
     double side1;
     double side2;
     double side3;
@@ -12,12 +14,15 @@ public class Triangle extends TwoDShape {
     public Triangle(double side1, double side2, double side3) {
         // Let this.side1 be the width of the triangle and heronsHeight to be its height
         super();
-        // Manually assign base and height;
-        super.width = side1;
-        super.height = heronsHeight();
+
+        // These need to come before heronsHeight is called because it uses them
         this.side1 = side1;
         this.side2 = side2;
         this.side3 = side3;
+
+        // Manually assign base and height;
+        super.width = side1;
+        super.height = heronsHeight();
     }
 
     private double heronsHeight() {
