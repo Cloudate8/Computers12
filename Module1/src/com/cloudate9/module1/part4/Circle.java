@@ -27,6 +27,9 @@ public class Circle extends TwoDShape {
      */
     @Override
     public double getArea() {
+        if (radius <= 0) {
+            throw new IllegalArgumentException("Radius cannot be less than or equal to 0");
+        }
         return PI * Math.pow(radius, 2);
     }
 
