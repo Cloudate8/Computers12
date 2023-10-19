@@ -13,7 +13,8 @@ public class Triangle extends TwoDShape implements Rotate {
 
     /**
      * Creates a triangle with the given width, height and colour
-     * @param width the width of the triangle
+     *
+     * @param width  the width of the triangle
      * @param height the height of the triangle
      * @param colour the colour of the triangle
      */
@@ -23,9 +24,10 @@ public class Triangle extends TwoDShape implements Rotate {
 
     /**
      * Creates a triangle with the given sides and colour
-     * @param side1 the first side of the triangle
-     * @param side2 the second side of the triangle
-     * @param side3 the third side of the triangle
+     *
+     * @param side1  the first side of the triangle
+     * @param side2  the second side of the triangle
+     * @param side3  the third side of the triangle
      * @param colour the colour of the triangle
      */
     public Triangle(double side1, double side2, double side3, Colour colour) {
@@ -44,6 +46,7 @@ public class Triangle extends TwoDShape implements Rotate {
 
     /**
      * Get the height of the triangle using Heron's formula <a href="https://www.youtube.com/watch?v=a1PR9O1Va84">https://www.youtube.com/watch?v=a1PR9O1Va84</a>
+     *
      * @return the height of the triangle
      */
     private double heronsHeight() {
@@ -56,6 +59,7 @@ public class Triangle extends TwoDShape implements Rotate {
 
     /**
      * Get the area of the triangle, using the formula 1/2 * base * height
+     *
      * @return the area of the triangle
      */
     @Override
@@ -65,6 +69,7 @@ public class Triangle extends TwoDShape implements Rotate {
 
     /**
      * Get the string representation of the triangle, including all of its fields
+     *
      * @return the string representation of the triangle
      */
     @Override

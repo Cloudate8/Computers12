@@ -17,8 +17,9 @@ public interface Rotate {
 
     /**
      * Rotates the shape by the specified number of degrees clockwise
+     *
      * @param degree the number of degrees to rotate the shape
      */
     void rotate(double degree);
-    
+
 }

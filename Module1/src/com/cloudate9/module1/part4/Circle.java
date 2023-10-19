@@ -10,6 +10,7 @@ public class Circle extends TwoDShape {
 
     /**
      * Default constructor
+     *
      * @param radius the radius of the circle
      * @param colour the colour of the circle
      */
@@ -21,6 +22,7 @@ public class Circle extends TwoDShape {
 
     /**
      * Get the area of the circle, using the formula PI * radius^2
+     *
      * @return the area of the circle
      */
     @Override
@@ -30,6 +32,7 @@ public class Circle extends TwoDShape {
 
     /**
      * Get the string representation of the circle, including all of its fields
+     *
      * @return the string representation of the circle
      */
     @Override

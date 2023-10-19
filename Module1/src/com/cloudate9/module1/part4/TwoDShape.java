@@ -10,7 +10,8 @@ public abstract class TwoDShape {
 
     /**
      * This constructor is used to create a shape with a given width, height, and colour
-     * @param width the width of the shape
+     *
+     * @param width  the width of the shape
      * @param height the height of the shape
      * @param colour the colour of the shape
      */
@@ -23,6 +24,7 @@ public abstract class TwoDShape {
     /**
      * This constructor is used to create a shape with the given colour.
      * NOTE THAT THE WIDTH AND HEIGHT ARE NOT SET AND WILL HAVE TO BE DONE MANUALLY
+     *
      * @param colour the colour of the shape
      */
     public TwoDShape(Colour colour) {
@@ -31,6 +33,7 @@ public abstract class TwoDShape {
 
     /**
      * Gets the width of the shape
+     *
      * @return the width of the shape
      */
     public double getWidth() {
@@ -39,6 +42,7 @@ public abstract class TwoDShape {
 
     /**
      * Sets the width of the shape
+     *
      * @param width the new width of the shape
      */
     public void setWidth(double width) {
@@ -47,6 +51,7 @@ public abstract class TwoDShape {
 
     /**
      * Gets the height of the shape
+     *
      * @return the height of the shape
      */
     public double getHeight() {
@@ -55,6 +60,7 @@ public abstract class TwoDShape {
 
     /**
      * Sets the height of the shape
+     *
      * @param height the new height of the shape
      */
     public void setHeight(double height) {
@@ -63,6 +69,7 @@ public abstract class TwoDShape {
 
     /**
      * Gets the colour of the shape
+     *
      * @return the colour of the shape
      */
     public Colour getColour() {
@@ -71,6 +78,7 @@ public abstract class TwoDShape {
 
     /**
      * Sets the colour of the shape
+     *
      * @param colour the new colour of the shape
      */
     public void setColour(Colour colour) {
@@ -80,6 +88,7 @@ public abstract class TwoDShape {
     /**
      * This method calculates the area of the shape using its area formula
      * This method is abstract because each shape has a different formula for calculating its area
+     *
      * @return the area of the shape
      */
     public abstract double getArea();
