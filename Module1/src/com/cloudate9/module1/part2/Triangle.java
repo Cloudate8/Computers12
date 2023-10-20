@@ -26,14 +26,27 @@ public class Triangle extends TwoDShape {
     }
 
     private double heronsHeight() {
+        if (side1 <= 0 || side2 <= 0 || side3 <= 0) {
+            return 0; // A triangle with a negative or zero side has no height
+        }
+
+        // Formula taken from https://www.youtube.com/watch?v=a1PR9O1Va84
         double s = (side1 + side2 + side3) / 2;
         double area = Math.sqrt(s * (s - side1) * (s - side2) * (s - side3));
+
+        if (area <= 0 || Double.isNaN(area)) {
+            return 0; // A triangle with a negative or zero area has no height cause it's not a triangle
+        }
+
         double h = 2 * area / side1;
         return h;
     }
 
     @Override
     public double getArea() {
+        if (super.width <= 0 || super.height <= 0) {
+            return 0; // A triangle with a negative or zero base or height has no area
+        }
         return 0.5 * super.width * super.height;
     }
 

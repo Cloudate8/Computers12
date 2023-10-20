@@ -13,6 +13,9 @@ public class Circle extends TwoDShape {
 
     @Override
     public double getArea() {
+        if (radius <= 0.0) {
+            return 0; // A circle with a negative or zero radius has no area
+        }
         return PI * Math.pow(radius, 2);
     }
 
