@@ -4,8 +4,8 @@ package com.cloudate9.module1.part4;
  * Represents a 2D shape
  */
 public abstract class TwoDShape {
-    double width;
-    double height;
+    private double width;
+    private double height;
     Colour colour;
 
     /**

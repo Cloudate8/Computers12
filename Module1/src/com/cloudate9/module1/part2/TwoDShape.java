@@ -1,8 +1,8 @@
 package com.cloudate9.module1.part2;
 
 public abstract class TwoDShape {
-    double width;
-    double height;
+    private double width;
+    private double height;
 
     public TwoDShape(double width, double height) {
         this.width = width;

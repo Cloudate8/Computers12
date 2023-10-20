@@ -39,23 +39,23 @@ public class Triangle extends TwoDShape implements Rotate {
             return 0; // A triangle with a negative or zero area has no height cause it's not a triangle
         }
 
-        double h = 2 * area / super.width;
+        double h = 2 * area / super.getWidth();
         return h;
     }
 
     @Override
     public double getArea() {
-        if (super.width <= 0 || super.height <= 0) {
+        if (super.getWidth() <= 0 || super.getHeight() <= 0) {
             return 0; // A triangle with a negative or zero base or height has no area
         }
-        return 0.5 * super.width * super.height;
+        return 0.5 * super.getWidth() * super.getHeight();
     }
 
     @Override
     public String toString() {
         return "Triangle{" +
-                "width=" + super.width +
-                ", height=" + super.height +
+                "width=" + super.getWidth() +
+                ", height=" + super.getHeight() +
                 ", side1=" + side1 +
                 ", side2=" + side2 +
                 ", side3=" + side3 +

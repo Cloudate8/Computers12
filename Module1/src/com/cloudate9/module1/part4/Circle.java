@@ -9,7 +9,7 @@ public class Circle extends TwoDShape {
     private double radius;
 
     /**
-     * Default constructor
+     * Create a circle with the given radius and colour
      *
      * @param radius the radius of the circle
      * @param colour the colour of the circle
@@ -41,8 +41,8 @@ public class Circle extends TwoDShape {
     @Override
     public String toString() {
         return "Circle{" +
-                "width=" + super.width +
-                ", height=" + super.height +
+                "width=" + super.getWidth() +
+                ", height=" + super.getHeight() +
                 ", colour=" + super.colour +
                 ", PI=" + PI +
                 ", radius=" + radius +

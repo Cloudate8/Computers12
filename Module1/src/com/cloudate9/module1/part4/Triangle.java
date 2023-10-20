@@ -62,7 +62,7 @@ public class Triangle extends TwoDShape implements Rotate {
             return 0; // A triangle with a negative or zero area has no height cause it's not a triangle
         }
 
-        double h = 2 * area / super.width;
+        double h = 2 * area / super.getWidth();
         return h;
     }
 
@@ -73,10 +73,10 @@ public class Triangle extends TwoDShape implements Rotate {
      */
     @Override
     public double getArea() {
-        if (super.width <= 0 || super.height <= 0) {
+        if (super.getWidth() <= 0 || super.getHeight() <= 0) {
             return 0; // A triangle with a negative or zero base or height has no area
         }
-        return 0.5 * super.width * super.height;
+        return 0.5 * super.getWidth() * super.getHeight();
     }
 
     /**
@@ -87,8 +87,8 @@ public class Triangle extends TwoDShape implements Rotate {
     @Override
     public String toString() {
         return "Triangle{" +
-                "width=" + super.width +
-                ", height=" + super.height +
+                "width=" + super.getWidth() +
+                ", height=" + super.getHeight() +
                 ", colour=" + super.colour +
                 ", side1=" + side1 +
                 ", side2=" + side2 +
@@ -98,16 +98,27 @@ public class Triangle extends TwoDShape implements Rotate {
                 '}';
     }
 
+    /**
+     * Rotates the shape 90 degrees clockwise
+     */
     @Override
     public void rotate90() {
         rotate(90);
     }
 
+    /**
+     * Rotates the shape 180 degrees clockwise
+     */
     @Override
     public void rotate180() {
         rotate(180);
     }
 
+    /**
+     * Rotates the shape by the specified number of degrees clockwise
+     *
+     * @param degree the number of degrees to rotate the shape
+     */
     @Override
     public void rotate(double degree) {
         angle += degree;

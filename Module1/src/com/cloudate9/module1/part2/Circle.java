@@ -22,8 +22,8 @@ public class Circle extends TwoDShape {
     @Override
     public String toString() {
         return "Circle{" +
-                "width=" + super.width +
-                ", height=" + super.height +
+                "width=" + super.getWidth() +
+                ", height=" + super.getHeight() +
                 ", PI=" + PI +
                 ", radius=" + radius +
                 ", area=" + getArea() +
