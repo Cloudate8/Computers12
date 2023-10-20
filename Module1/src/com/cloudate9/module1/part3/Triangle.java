@@ -39,7 +39,7 @@ public class Triangle extends TwoDShape implements Rotate {
             return 0; // A triangle with a negative or zero area has no height cause it's not a triangle
         }
 
-        double h = 2 * area / side1;
+        double h = 2 * area / super.width;
         return h;
     }
 
