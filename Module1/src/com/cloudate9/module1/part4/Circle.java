@@ -6,7 +6,7 @@ package com.cloudate9.module1.part4;
 public class Circle extends TwoDShape {
 
     public final double PI = 3.141592653589;
-    private double radius;
+    private final double radius;
 
     /**
      * Create a circle with the given radius and colour

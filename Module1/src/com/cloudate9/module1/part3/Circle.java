@@ -3,7 +3,7 @@ package com.cloudate9.module1.part3;
 public class Circle extends TwoDShape {
 
     public final double PI = 3.141592653589;
-    private double radius;
+    private final double radius;
 
     public Circle(double radius) {
         // The radius is half of the width and height. To get width and height, multiply radius by 2 (diameter)
