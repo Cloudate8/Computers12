@@ -5,7 +5,7 @@ package com.cloudate9.module1.part4;
  */
 public class Circle extends TwoDShape {
 
-    public final double PI = 3.141592653589;
+    public final double PI = Math.PI;
     private final double radius;
 
     /**
