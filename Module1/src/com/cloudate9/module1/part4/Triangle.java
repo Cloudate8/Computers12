@@ -89,7 +89,7 @@ public class Triangle extends TwoDShape implements Rotate {
         return "Triangle{" +
                 "width=" + super.getWidth() +
                 ", height=" + super.getHeight() +
-                ", colour=" + super.colour +
+                ", colour=" + super.getColour() +
                 ", side1=" + side1 +
                 ", side2=" + side2 +
                 ", side3=" + side3 +

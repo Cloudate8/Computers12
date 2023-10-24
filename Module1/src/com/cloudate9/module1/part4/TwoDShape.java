@@ -6,7 +6,7 @@ package com.cloudate9.module1.part4;
 public abstract class TwoDShape {
     private double width;
     private double height;
-    Colour colour;
+    private Colour colour;
 
     /**
      * This constructor is used to create a shape with a given width, height, and colour

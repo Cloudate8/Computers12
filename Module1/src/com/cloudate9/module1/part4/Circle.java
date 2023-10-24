@@ -43,7 +43,7 @@ public class Circle extends TwoDShape {
         return "Circle{" +
                 "width=" + super.getWidth() +
                 ", height=" + super.getHeight() +
-                ", colour=" + super.colour +
+                ", colour=" + super.getColour() +
                 ", PI=" + PI +
                 ", radius=" + radius +
                 ", area=" + getArea() +
