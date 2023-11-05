@@ -13,8 +13,8 @@ public class Main {
         Set<String> unique = new HashSet<>();
         Scanner scanner = new Scanner(new File("illiad.txt"));
         while (scanner.hasNext()) {
-            // Make word lowercase and filter out all non-alphabetic characters
-            String word = scanner.next().toLowerCase().replaceAll("[^a-z]", "");
+            // Make word lowercase and filter out all non-alphanumeric characters
+            String word = scanner.next().toLowerCase().replaceAll("[^a-z0-9]", "");
             unique.add(word);
         }
         scanner.close();
