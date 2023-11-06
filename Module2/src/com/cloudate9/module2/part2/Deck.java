@@ -50,4 +50,24 @@ public class Deck {
         }
         return polledCards;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Deck deck = (Deck) o;
+        return Objects.equals(cards, deck.cards);
+    }
+
+    @Override
+    public int hashCode() {
+        return cards.hashCode();
+    }
+
+    @Override
+    public String toString() {
+        return "Deck{" +
+                "cards=" + cards +
+                '}';
+    }
 }

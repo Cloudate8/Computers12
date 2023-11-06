@@ -1,9 +1,6 @@
 package com.cloudate9.module2.part3;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 /**
  * The instructions ask me to "put [the cards] into a linked list and simulate a stack using a method that
@@ -52,5 +49,25 @@ public class Deck {
             polledCards.add(cards.poll());
         }
         return polledCards;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Deck deck = (Deck) o;
+        return Objects.equals(cards, deck.cards);
+    }
+
+    @Override
+    public int hashCode() {
+        return cards.hashCode();
+    }
+
+    @Override
+    public String toString() {
+        return "Deck{" +
+                "cards=" + cards +
+                '}';
     }
 }

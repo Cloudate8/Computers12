@@ -1,5 +1,7 @@
 package com.cloudate9.module2.part3;
 
+import java.util.Objects;
+
 public class Card {
     private Suit suit;
 
@@ -36,6 +38,19 @@ public class Card {
 
     // No setting if it is a face card or not as it should be automatically determined
 
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Card card = (Card) o;
+        return rank == card.rank && isFaceCard == card.isFaceCard && suit == card.suit;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(suit, rank, isFaceCard);
+    }
 
     @Override
     public String toString() {
