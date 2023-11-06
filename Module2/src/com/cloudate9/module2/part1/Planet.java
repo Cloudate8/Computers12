@@ -43,7 +43,7 @@ public class Planet {
 
     @Override
     public int hashCode() {
-        return Objects.hash(designation);
+        return designation.hashCode();
     }
 
     @Override
