@@ -18,6 +18,7 @@ public class Main {
         System.out.println(decryptedMessageShift3);
 
         // Bonus method that cracks the caesar cipher
+        // Words file placed in the root directory of the project for ease of access
         CaesarCipherCracker cracker = new CaesarCipherCracker(new File("words_alpha.txt"));
         int crack1 = cracker.findShift(encryptedMessageShift1);
         System.out.println(crack1);
