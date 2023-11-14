@@ -6,13 +6,13 @@ public class Card {
     private Suit suit;
 
     // Ace is '1'
-    private char rank;
+    private String rank;
     private boolean isFaceCard;
 
-    public Card(Suit suit, char rank) {
+    public Card(Suit suit, String rank) {
         this.suit = suit;
         this.rank = rank;
-        this.isFaceCard = (rank == 'K' || rank == 'Q' || rank == 'J');
+        this.isFaceCard = (rank.equals("K") || rank.equals("Q") || rank.equals("J"));
     }
 
     public Suit getSuit() {
@@ -23,13 +23,13 @@ public class Card {
         this.suit = suit;
     }
 
-    public char getRank() {
+    public String getRank() {
         return rank;
     }
 
-    public void setRank(char rank) {
+    public void setRank(String rank) {
         this.rank = rank;
-        this.isFaceCard = (rank == 'K' || rank == 'Q' || rank == 'J');
+        this.isFaceCard = (rank.equals("K") || rank.equals("Q") || rank.equals("J"));
     }
 
     public boolean isFaceCard() {
@@ -44,7 +44,7 @@ public class Card {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Card card = (Card) o;
-        return rank == card.rank && isFaceCard == card.isFaceCard && suit == card.suit;
+        return rank.equals(card.rank) && isFaceCard == card.isFaceCard && suit == card.suit;
     }
 
     @Override

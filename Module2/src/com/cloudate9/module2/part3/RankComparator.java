@@ -9,22 +9,22 @@ public class RankComparator implements Comparator<Card> {
 
     @Override
     public int compare(Card o1, Card o2) {
-        char rank1 = o1.getRank();
-        char rank2 = o2.getRank();
+        String rank1 = o1.getRank();
+        String rank2 = o2.getRank();
 
-        if (rank1 == rank2) return 0;
+        if (rank1.equals(rank2)) return 0;
         if (o1.isFaceCard()) {
             if (!o2.isFaceCard()) return -1;
             switch (rank1) {
-                case 'K' -> {
+                case "K" -> {
                     return -1;
                 }
-                case 'Q' -> {
-                    if (rank2 == 'K') return 1;
+                case "Q" -> {
+                    if (rank2.equals("K")) return 1;
                     return -1;
                 }
-                case 'J' -> {
-                    if (rank2 == 'K' || rank2 == 'Q') return 1;
+                case "J" -> {
+                    if (rank2.equals("K") || rank2.equals("Q")) return 1;
                     return -1;
                 }
             }
@@ -33,6 +33,6 @@ public class RankComparator implements Comparator<Card> {
             return 1;
         }
         // Neither are face cards, so we can just compare the ranks
-        return rank1 > rank2 ? -1 : 1;
+        return Integer.parseInt(rank1) > Integer.parseInt(rank2) ? -1 : 1;
     }
 }

@@ -22,12 +22,12 @@ public class Deck {
     private LinkedList<Card> createDeck() {
         LinkedList<Card> unShuffledCards = new LinkedList<>();
         for (Suit suit : Suit.values()) {
-            for (char rank = '1'; rank <= '9'; rank++) {
-                unShuffledCards.add(new Card(suit, rank));
+            for (int rank = 1; rank <= 10; rank++) {
+                unShuffledCards.add(new Card(suit, String.valueOf(rank)));
             }
-            unShuffledCards.add(new Card(suit, 'K'));
-            unShuffledCards.add(new Card(suit, 'Q'));
-            unShuffledCards.add(new Card(suit, 'J'));
+            unShuffledCards.add(new Card(suit, "K"));
+            unShuffledCards.add(new Card(suit, "Q"));
+            unShuffledCards.add(new Card(suit, "J"));
         }
         return unShuffledCards;
     }
